@@ -1,47 +1,44 @@
 <style>
 
-  nav {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-content: space-around;
-    align-items: center;
-/*     position: absolute;
-    left: 100px;
-    top: 100px; */
+  button {
+   border: 1px solid black;
+    padding: 20px 30px;
     background-color: pink;
-    height: 100px;
-    padding: 10px;
+    cursor: pointer;
     
   }
-  
-  a{
-    display: inline;
-    background-color: yellow;
-  }
-  
-  @media (max-width: 415px) {
-    nav{
-      background-color: grey;
-        height: 50px;
-      flex-direction: column;
-    }
-    }
-    /* screens less than 415px wide */
-  
-  .box{
-    background: red;
-    border: 1px solid black;
-    text-align: center;
-    padding: 10px;
-    
-  }
-  
 </style>
 
-<nav>
-<a href="#">about</a>
-  <a href="#">shop</a>
-  <a href="#">contact</a>
- <div class="box">1</div>
+<button class="noodle">hello</button>
 
-</nav>
+<img src="noodle.gif" alt="noodle">
+
+<script>
+  
+function bgChange () {
+  nn.get('.noodle').style.background = nn.randomColor()
+  document.body.style.backgroundColor =nn.randomColor()
+  nn.get('#bell').play()
+  nn.get('#bell').currentTime=0.5
+  
+  const text = nn.get('noodle').textContent
+if (text === 'hello'){
+  nn.get('noodle').textContext = "goobye"
+} else {
+  nn.get('.noodle').textContent = "hello"
+}
+}
+  
+
+  
+  
+  nn.get('.noodle').on('click', bgChange)
+//   const button = document.querlySelector('.noodle')
+// button.addEventListener('click', bgChange)
+  
+  // document.body.style.backgroundColor = "red"
+
+</script>
+  
+
+  
