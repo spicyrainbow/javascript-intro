@@ -1,0 +1,47 @@
+<style>
+
+  nav {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-around;
+    align-items: center;
+/*     position: absolute;
+    left: 100px;
+    top: 100px; */
+    background-color: pink;
+    height: 100px;
+    padding: 10px;
+    
+  }
+  
+  a{
+    display: inline;
+    background-color: yellow;
+  }
+  
+  @media (max-width: 415px) {
+    nav{
+      background-color: grey;
+        height: 50px;
+      flex-direction: column;
+    }
+    }
+    /* screens less than 415px wide */
+  
+  .box{
+    background: red;
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+    
+  }
+  
+</style>
+
+<nav>
+<a href="#">about</a>
+  <a href="#">shop</a>
+  <a href="#">contact</a>
+ <div class="box">1</div>
+
+</nav>
